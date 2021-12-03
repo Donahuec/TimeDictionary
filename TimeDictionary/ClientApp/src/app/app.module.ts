@@ -38,12 +38,12 @@ import { SettingsComponent } from './settings/settings.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: TasksComponent, pathMatch: 'full' },
-      { path: 'tasks', component: TasksComponent },
-      { path: 'groups', component: GroupsComponent },
-      { path: 'tags', component: TagsComponent },
-      { path: 'settings', component: SettingsComponent }
-    ]),
+    { path: '', component: TasksComponent, pathMatch: 'full' },
+    { path: 'tasks', component: TasksComponent },
+    { path: 'groups', component: GroupsComponent },
+    { path: 'tags', component: TagsComponent },
+    { path: 'settings', component: SettingsComponent }
+], { relativeLinkResolution: 'legacy' }),
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
