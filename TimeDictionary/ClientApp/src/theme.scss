@@ -1,25 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
-@import '@angular/material/theming';
+@use "@angular/material" as mat;
+@use "./_theme-styles.scss" as theme-styles;
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
+$primary: mat.define-palette(mat.$indigo-palette, 500);
+$accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
-code {
-  color: #e01a76;
-}
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+    ),
+  )
+);
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.app-content {
-  width: 75%;
-  margin-left: 5%;
-}
+@include mat.all-component-themes($light-theme);
+@include theme-styles.theme($light-theme);
