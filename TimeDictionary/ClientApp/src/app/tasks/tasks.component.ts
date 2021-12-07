@@ -8,5 +8,7 @@ import { Component, OnInit } from "@angular/core";
 export class TasksComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    let x = 1;
+  }
 }
